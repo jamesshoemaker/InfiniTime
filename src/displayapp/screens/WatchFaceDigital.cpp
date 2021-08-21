@@ -206,7 +206,7 @@ bool WatchFaceDigital::Refresh() {
       if (settingsController.GetClockType() == Controllers::Settings::ClockType::H24) {
         sprintf(dateStr, "%s %d %s %d", dateTimeController.DayOfWeekShortToString(), day, dateTimeController.MonthShortToString(), year);
       } else {
-        sprintf(dateStr, "%s %s %d %d", dateTimeController.DayOfWeekShortToString(), dateTimeController.MonthShortToString(), day, year);
+        sprintf(dateStr, "%s %d-%d-%d", dateTimeController.DayOfWeekShortToString(), month, day, year);
       }
       lv_label_set_text(label_date, dateStr);
       lv_obj_align(label_date, lv_scr_act(), LV_ALIGN_CENTER, 0, 60);
